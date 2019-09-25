@@ -67,7 +67,7 @@
 						Page</button></a>
 			</div>
 			<div class="col-md-6">
-				<a href="edit-admin-profile.action?submitType=fetch&"><button
+				<a href="edit-admin-profile.action?submitType=fetch"><button
 						class="btn btn-info">Edit Profile</button></a>
 			</div>
 			

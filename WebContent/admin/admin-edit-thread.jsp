@@ -12,35 +12,52 @@
 <%@include file="../NavBar/navbar-admin.jsp" %>
 	<div class="container edit-profile-container">
 		<div class="row justify-content-center">
-			<h2>ABC Portal Edit Profile Page</h2>
+			<h2>ABC Portal Edit Thread Name / Subject</h2>
 		</div>
-		<div class="row">
+		<div class="row justify-content-center">
 				<div class="card">
 					<div class="card-body">
-						<form action="manage-threads" method="post">
+					<s:if test="threadDataList.isEmpty()">
+						<div class="row justify-content-center error-message mt-2">
+							<p><s:property value="error_msg" /></p>
+						</div>
+					</s:if>
+					<s:else>
+					<s:iterator value="threadDataList">
+						<form action="manage-threads.action?submitType=updateListing" method="post">
 							<div class="form-group">
-								<label>Thread Subject: </label> <input class="form-control"
-									name="thread_subject" type="text"
-									value="<s:property value="thr_subject" />">
+								
+									<label>Thread Subject: </label>
+									
+										<input type="hidden" name="thr_id" value="<s:property value="thr_id" />" />
+										<input class="form-control"
+											name="thr_subject" type="text"
+											value="<s:property value="thr_subject" />">
+									
 							</div>
-							<div class="edit-submit-wrapper justify-content-end d-flex">
-								<button class="btn btn-light w-50" type="submit"
-									name="submitType" value="updateListing">Confirm Edit</button>
+							<div>
+								<input type="submit" value="submit" class="btn btn-warning">
 							</div>
-
 						</form>
+						<form action="manage-threads.action?submitType=deleteThread" method="post">
+						
+							<div class="mt-3">
+								<input type="hidden" name="thr_id" value="<s:property value="thr_id" />" />
+								<input type="submit" value="delete this thread" class="btn btn-danger"/>
+							</div>
+						</form>
+						</s:iterator>
+					</s:else>
+						
+						
 					</div>
 				</div>
 
 		</div>
-		<div class="row justify-content-center error-message mt-2">
-			<p>
-				<s:property value="error_msg" />
-			</p>
-		</div>
-		<div class="row justify-content-center">
-			<a href="view-admin-profile"><button class="btn btn-info">Go
-					Back To Profile</button></a>
+		
+		<div class="row justify-content-center mt-3">
+			<a href="manage-threads.action?submitType=viewAll"><button class="btn btn-info">Go
+					Back To Thread Listing</button></a>
 		</div>
 
 

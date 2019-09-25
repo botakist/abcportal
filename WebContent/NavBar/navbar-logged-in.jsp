@@ -19,7 +19,7 @@
                       <div class="dropdown-menu" aria-labelledby="dropdownId">
                           <a class="dropdown-item" href="manage-threads.action?submitType=viewAll">View Threads</a>
                           <a class="dropdown-item" href="manage-jobs.action?submitType=fetchAll">View Jobs</a>
-                          <a class="dropdown-item" href="#">View Messages</a>
+                          <a class="dropdown-item" href="view-messages.action?submitType=fetchALl">View Messages</a>
                       </div>
                   </li>
 						<li class="nav-item"><a class="nav-link"

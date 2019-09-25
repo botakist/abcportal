@@ -12,7 +12,7 @@
 <%@include file="../NavBar/navbar-logged-in.jsp" %>
 	<div class="container">
 		<div class="row justify-content-center">
-			<h2>ABC Portal Thread Listing</h2>
+			<h2>ABC Portal User Thread Listing</h2>
 		</div>
 	</div>
 	<div style="margin-top: 40px; margin-right: 150px; margin-left: 150px;">
@@ -30,9 +30,9 @@
 				<tr>
 					<td><s:property value="thr_id"/></td>
 					<td><s:property value="thr_subject" /></td>
-					<td></td>
-					<td></td>
-					<td><a href=""><button class="btn btn-info">View</button></a></td>
+					<td>Test</td>
+					<td>Test</td>
+					<td><a href="manage-threads.action?submitType=viewSingle&thr_id=<s:property value='thr_id'/>"><button class="btn btn-info">View</button></a></td>
 				</tr>
 			</s:iterator>
 

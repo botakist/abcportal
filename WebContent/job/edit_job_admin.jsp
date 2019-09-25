@@ -37,16 +37,20 @@
 									name="job_salary" type="text"
 									value="<s:property value="job_salary"/>">
 							</div>
+							
 							<div class="form-group">
-								<label></label> <input class="form-control"
-									name="job_availability" type="text"
-									value="<s:property value="job_availability"/>">
+							<label for="job_availability">Availability: </label>
+							<select class="form-control" name="job_availability">
+								<option value='<s:property value="job_availability" />'>Currently Set As(<s:property value="job_availability"/>)</option>
+								<option value="Open">Open</option>
+								<option value="Closed">Closed</option>
+							</select>
 							</div>
 							<div class="edit-submit-wrapper justify-content-end d-flex">
 								
 							</div>
 							<div class="edit-submit-wrapper row d-flex justify-content-around">
-							<div class="col-4"><button class="btn btn-info w-100" type="submit" name="submitType" value="cancel">Cancel</button></div>
+							<div class="col-4"><button class="btn btn-info w-100" type="submit" name="submitType" value="cancel">Go Back To Job Listing</button></div>
 							<div class="col-4"><button class="btn btn-warning w-100" type="submit" name="submitType" value="update">Confirm Update</button></div>
 								
 							</div>

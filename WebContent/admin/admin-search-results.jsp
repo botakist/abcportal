@@ -41,7 +41,7 @@
 
 		</table>
 		<div class="error_msg">
-			<div class="row">
+			<div class="row justify-content-center">
 				<p><s:property value="error_message" /></p>
 			</div>
 		</div>

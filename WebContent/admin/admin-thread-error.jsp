@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>ABC Single Job</title>
+<title>Insert title here</title>
 </head>
 <body>
-	
+	<h1>Error 404</h1>
+	<p>Please contact the portal's admin or try to login again.</p>
 </body>
 </html>

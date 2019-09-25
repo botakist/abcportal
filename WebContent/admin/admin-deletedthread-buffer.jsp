@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>ABC Single Job</title>
+<title>Insert title here</title>
 </head>
 <body>
-	
+<h1>Item Deleted.</h1>
+<a href="manage-threads.action?submitType=viewAll">Return to Thread Listing</a>
 </body>
 </html>

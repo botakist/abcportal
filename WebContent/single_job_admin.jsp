@@ -29,6 +29,7 @@
 	<div><a href="admin-delete-job.action?job_id=<s:property value="job_id" />"><button class="btn btn-danger">Delete This Job Posting</button></a></div>
 	<p><s:property value="error_message" /></p>
 </s:iterator>
+<a href="manage-jobs.action?submitType=fetchAll"><button>Go Back To Job Listing</button></a>
 </div>
 </body>
 <%@include file="scripts.jsp" %>

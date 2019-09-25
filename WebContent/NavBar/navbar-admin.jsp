@@ -10,7 +10,7 @@
 				</button>
 				<div class="collapse navbar-collapse" id="collapsibleNavId">
 				<form class="form-inline my-2 my-lg-0 justify-content-center" action="search-admin-profile" method="post">
-                  <input class="form-control mr-sm-2" type="text" name="search_query" placeholder="Search">
+                  <input class="form-control mr-sm-2" type="text" name="search_query" placeholder="Search Profile">
                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
               </form>
               
@@ -20,7 +20,7 @@
                       <div class="dropdown-menu" aria-labelledby="dropdownId">
                           <a class="dropdown-item" href="manage-threads.action?submitType=viewAll">Manage Threads</a>
                           <a class="dropdown-item" href="manage-jobs.action?submitType=fetchAll">Manage Jobs</a>
-                          <a class="dropdown-item" href="#">Manage Users</a>
+                          <a class="dropdown-item" href="manage-users.action?submitType=viewAll">Manage Users</a>
                       </div>
                   </li>
 						<li class="nav-item"><a class="nav-link"

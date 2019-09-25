@@ -15,9 +15,18 @@
 			<h2>ABC Admin Thread Listing</h2>
 		</div>
 	</div>
+	<div class="container">
+		<div class="row">
+			
+			<form action="manage-threads.action?submitType=postNewThread" class="d-flex" method="POST">
+				<s:textfield name="thr_subject" class="form-control" placeholder="Create New Thread"/>
+				<s:submit name="Post New Thread" class="ml-1 btn btn-success"/>
+			</form>
+		</div>
+	</div>
 	<div style="margin-top: 40px; margin-right: 150px; margin-left: 150px;">
-		<table class="table">
-			<thead>
+		<table class="table table-striped">
+			<thead class="thead-dark">
 				<tr style="background-color: #FEFEFE;">
 					<th scope="col">ID</th>
 					<th scope="col">THREAD SUBJECT</th>
@@ -27,17 +36,18 @@
 					<th scope="col">EDIT</th>
 				</tr>
 			</thead>
+			<tbody>
 			<s:iterator value="threadDataList">
 				<tr>
 					<td><s:property value="thr_id"/></td>
 					<td><s:property value="thr_subject" /></td>
 					<td></td>
 					<td><s:property value="user_id" /></td>
-					<td><a href="manage-threads.action?submitType=viewSingle"><button class="btn btn-info">View</button></a></td>
-					<td><a href="manage-threads.action?submitType=editListing"><button class="btn btn-warning">Edit Details</button></a></td>
+					<td><a href="manage-threads.action?submitType=viewSingle&thr_id=<s:property value="thr_id" />"><button class="btn btn-info">View</button></a></td>
+					<td><a href="manage-threads.action?submitType=editListing&thr_id=<s:property value="thr_id" />"><button class="btn btn-warning">Edit Details</button></a></td>
 				</tr>
 			</s:iterator>
-
+			</tbody>
 		</table>
 		
 		 <button onclick="topFunction()" id="myBtn" title="Go to top">Back To Top</button> 

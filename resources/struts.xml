@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="loginuser" class="abcportal.action.Login">
+			<result name="LOGINSUCCESS">/home.jsp</result>
+			<result name="LOGINERROR">/login.jsp</result>
+			<result name="ADMIN">/admin/admin-home.jsp</result>
+		</action>
+		<action name="logout-user">
+			<result>/default.jsp</result>
+		</action>
+		<action name="go-to-login">
+			<result>/login.jsp</result>
+		</action>
+		<action name="go-to-registration">
+			<result>/register.jsp</result>
+		</action>
+		<action name="go-to-forget-pwd">
+			<result>/forgetpassword.jsp</result>
+		</action>
+		<action name="back-to-home">
+			<result>/home.jsp</result>
+		</action>
+		<action name="back-to-admin-home">
+			<result>/admin/admin-home.jsp</result>
+		</action>
+		<action name="back-to-default">
+			<result>/default.jsp</result>
+		</action>
+		<action name="edit-profile-page">
+			<result>/editprofile.jsp</result>
+		</action>
+		<action name="registeruser" class="abcportal.action.Register">
+			<result name="REGISTERSUCCESS">/registerthankyou.jsp</result>
+			<result name="REGISTERERROR">/register.jsp</result>
+		</action>
+		<action name="forgetuser" class="abcportal.action.Forget">
+			<result name="FORGETSUCCESS">/forgetpasswordthankyou.jsp</result>
+			<result name="FORGETERROR">/forgetpassword.jsp</result>
+		</action>
+		<action name="searchprofile" class="abcportal.action.Search">
+			<result name="SEARCHSUCCESS">/searchresults.jsp</result>
+			<result name="SEARCHERROR">/searchresults.jsp</result>
+		</action>
+		<action name="search-admin-profile" class="abcportal.action.Search">
+			<result name="SEARCHSUCCESS">/admin/admin-search-results.jsp</result>
+			<result name="SEARCHERROR">/admin/admin-search-results.jsp</result>
+		</action>
+		<action name="view-profile" class="abcportal.action.View">
+			<result name="VIEWSUCCESS">/profile.jsp</result>
+			<result name="VIEWERROR">/profile.jsp</result>
+		</action>
+		<action name="view-admin-profile" class="abcportal.action.View">
+			<result name="VIEWSUCCESS">/admin/admin-profile.jsp</result>
+			<result name="VIEWERROR">/admin/admin-profile.jsp</result>
+		</action>
+		<action name="edit-profile" class="abcportal.action.Edit">
+			<result name="EDITSUCCESS">/editprofile.jsp</result>
+			<result name="EDITERROR">/editprofile.jsp</result>
+		</action>
+		<action name="edit-admin-profile" class="abcportal.action.Edit">
+			<result name="EDITSUCCESS">/admin/admin-edit-profile.jsp</result>
+			<result name="EDITERROR">/admin/admin-edit-profile.jsp</result>
+		</action>
+		<action name="manage-jobs" class="abcportal.action.ViewJobListing">
+			<result name="VIEWJOBSUCCESS">/job_listing.jsp</result>
+			<result name="VIEWJOBERROR">/job_listing.jsp</result>
+		</action>
+		<action name="view-single-job" class="abcportal.action.ViewJobListing">
+			<result name="SINGLEJOBADMIN">/single_job_admin.jsp</result>
+			<result name="SINGLEJOBSUCCESS">/single_job_user.jsp</result>
+		</action>
+		<action name="edit-single-job" class="abcportal.action.EditJobListing">
+			<result name="GOBACK">/job_listing.jsp</result>
+			<result name="EDITJOBSUCCESS">/job/edit_job_admin.jsp</result>
+			<result name="EDITJOBERROR">/job/edit_job_admin.jsp</result>
+		</action>
+		<action name="view-admin-postings" class="abcportal.action.ViewJobListing">
+			<result name="VIEWADMINPOST">/job_listing.jsp</result>
+		</action>
+		<action name="admin-post-new">
+			<result>/job/post-job-admin.jsp</result>
+		</action>
+		<action name="admin-create-new" class="abcportal.action.PostJobListing">
+			<result name="POSTJOBSUCCESS">/job/post-notice.jsp</result>
+			<result name="POSTJOBERROR">/job/post-error.jsp</result>
+		</action>
+		<action name="admin-delete-job" class="abcportal.action.DeleteJobListing">
+			<result name="DELETEJOBSUCCESS">/job/delete-notice.jsp</result>
+			<result name="DELETEJOBERROR">/job/delete-error.jsp</result>
+		</action>
+		<action name="manage-threads" class="abcportal.action.ThreadActions" method="execute">
+			<result name="ADMINTHREADLISTING">/admin/admin-thread-listing.jsp</result>
+			<result name="VIEWSINGLETHREADADMIN">/admin/admin-single-thread.jsp</result>
+			<result name="UPDATETHREADFORM">/admin/admin-edit-thread.jsp</result>
+			
+			<result name="NORMALTHREADLISTING">/normal-user/thread-listing.jsp</result>
+			<result name="NORMALSINGLETHREAD">/normal-user/single-thread.jsp</result>
+			
+		</action>
+		
+		<action name="manage-users" class="abcportal.action.UserActions" method="execute">
+			<result name="USERLISTADMIN">/admin/user/admin-user-listing.jsp</result>
+			<result name="USERSINGLEADMIN">/admin/user/admin-user-profile.jsp</result>
+			<result name="DELETESUCCESS" type="redirectAction">manage-users.action?submitType=viewAll</result>
+			
+			<result name="USERLISTNORMAL">/normal-user/normal-user-listing.jsp</result>
+			<result name="USERSINGLENORMAL">/normal-user/normal-user-profile.jsp</result>
+			
+			<result name="ADMINBACK" type="redirectAction">manage-users.action?submitType=viewAll</result>
+			<result name="NORMALBACK" type="redirectAction">manage-users.action?submitType=viewAll</result>
+			
+			<result name="ADMIN404">/admin/user/admin-user-error.jsp</result>
+			<result name="USER404">/normal-user/normal-user-error.jsp</result>
+		</action>
+	</package>
+</struts>  

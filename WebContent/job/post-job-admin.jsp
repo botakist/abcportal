@@ -51,7 +51,7 @@
 
 				<div class="row">
 					<div class="col-md-6 mb-2 order-md-first">
-						<a href=""><button type="button"
+						<a href="manage-jobs.action?submitType=fetchAll"><button type="button"
 								class="w-100 btn btn-warning">Back</button></a>
 					</div>
 					<div class="col-md-6 mb-2 order-sm-first">
